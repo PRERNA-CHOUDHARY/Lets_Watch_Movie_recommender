@@ -1,0 +1,103 @@
+The text file contains all the intentions & behaviors that Alan AI can understand and reply.
+
+intent('Hello ', p => {
+    p.play('Hi there');
+});
+
+intent(
+    'Who\'s there',
+    'What\'s your name',
+    p => {
+        p.play(
+            'Its Let\'s Watch : Movie recommender system , Enter what you like to watch',
+            'It\'s Let\'s Watch.',
+        );
+    },
+);
+
+intent('(I will have|Get me) a coffee, please', p => {
+    p.play('Sorry, I don\'t have hands to brew it.');
+});
+
+intent(
+    '(How is|what is) the (weather|temperature) (today|)',
+    'Today\'s forecast',
+    p => {
+        p.play(
+            '(It is|Feels|) (great|awesome)!',
+            'Rainy, windy, and cold. (A total mess!|)',
+        );
+    },
+);
+
+intent('Let\'s play hide and seek', p => {
+    p.play('Sure.');
+    p.play('I\'ll count.');
+    p.play('One');
+    p.play('Two');
+    p.play('Three');
+    p.play('Found you!');
+});
+
+intent('I want my walls to be $(COLOR green|blue|orange|yellow|white)', p => {
+    p.play(`Mmm, ${p.COLOR.value}. Nice, love it!`);
+});
+
+
+intent('What is $(DATE)', p => {
+    const formattedDate = p.DATE.moment.format('dddd, MMMM Do YYYY');
+
+    p.play(`${p.DATE.value} is a date`);
+    p.play(`It is ${formattedDate}`);
+});
+
+question(
+    'What does this (app|script|project) do',
+    'What is this (app|script|project|)',
+    'Why do I need this',
+    reply('Whenever a movie is searched, the model compares it with the genre, title, cast, director, and outline of other movies in the data-set, then based on the cosine similarity, movie recommender system  returns the top x nearest neighbor.'),
+);
+
+question(
+    'How does this work',
+    'How to use this',
+    'What can I do here',
+    'What (should I|can I|to) do',
+    'What commands are available',
+    reply('Just click on search bar and enter movie name like:(Avatar|Snow Angels|Harry Potter and the Prisoner of Azkaban|The Matrix Reloaded|X2|Superman) and press search button ,  for history click on Show history button'),
+);
+question(
+    'What does this (app|script|project) do',
+    'What is this (app|script|project|)',
+    'Why do I need this',
+    reply('Whenever a movie is searched, the model compares it with the genre, title, cast, director, and outline of other movies in the data-set, then based on the cosine similarity, the movie recommender system  returns the top x nearest neighbor.'),
+);
+
+question(
+    'How does this work',
+    'How to use this',
+    'What can I do here',
+    'What (should I|can I|to) do',
+    'What commands are available',
+    reply('Just click on the search bar and enter movie name like (Avatar|Snow Angels|Harry Potter and the Prisoner of Azkaban|The Matrix Reloaded|X2|Superman) and press the search button ,  for history click on Show history button'),
+);
+
+question(
+    'Which (algorithm|algo) (is|are) used?',
+    reply('Let\'s Watch is packed with the Cosine Similarity Algorithm at the top of the K-Nearest Neighbours (KNN) Algorithm.'),
+);
+
+question(
+    'What tech stack (is|are) used?',
+    reply('Well There are a lot , for backend firebase authentication and python are used , if I Talk about the python module they are: fast api, uvicorn, numpy, pandas, sklearn, nltk, pickle, whereas for front-end React, Tailwind css and alan AI are used'),
+);
+
+question(
+    'What is recommendation system?',
+    reply(' Recommendation systems are often seen as a black box, the model created by these large companies are not very easily interpretable. The results which are generated are often recommendations for the user for things that they (need | want) but are unaware that they (need | want) it until they’ve been recommended to them. '),
+);
+
+question(
+    'suggest some good movie',
+    reply('Well there are a lot , you may go for Tangled, Man in Black , X2, Batman, Avangers, King Kong or Skyfall'),
+);
