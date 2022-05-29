@@ -66,6 +66,11 @@ We can understand its working with the help of following steps −
    4. Now, it will assign a class to the test point based on most frequent class of these rows.
 - End
 
+## Links:
+Youtube Demo Link : [Click Here](https://youtu.be/HOxQCHzC_x4)
+Frontend README : [Click Here](https://github.com/PRERNA-CHOUDHARY/Lets_Watch_Movie_recommender/blob/master/FRONTEND/README.md)
+Backend README :[Click Here](https://github.com/PRERNA-CHOUDHARY/Lets_Watch_Movie_recommender/blob/master/BACKEND/README.md)
+
 ## Conclusion
 
 After trying different algorithms to make the best out of our recommendation system, Let's Watch is packed with the `Cosine Similarity Algorithm` at the top of the `K-Nearest Neighbours (KNN) Algorithm`. The website aims to give recommendations related to users' search in the best possible way.
